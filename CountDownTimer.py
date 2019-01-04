@@ -5,11 +5,13 @@ import arrow
 # GUI:
 app = QApplication([])
 text_area = QTextEdit()
-# text_area.setFocusPolicy(Qt.NoFocus)
-# message = QLineEdit()
+label = QLabel()
+label.setText("test")
+
 layout = QVBoxLayout()
 layout.addWidget(text_area)
-# layout.addWidget(message)
+layout.addWidget(label)
+
 window = QWidget()
 window.setLayout(layout)
 window.show()
@@ -24,10 +26,12 @@ def display_new_messages():
     now = arrow.now()
     end = arrow.get('2019-01-31 16:20:03', 'YYYY-MM-DD HH:mm:ss')
     calc = now - end
-    # calcned = calc.shift(cal)
-    # d3 = now.shift(days=+15).humanize()
-    # text_area.append('d3: ' + str(d3))
     text_area.append(str(calc))
+    label.setText(str(calc))
+
+
+# def countDownDispaly():
+
 
 
 # Signals:
