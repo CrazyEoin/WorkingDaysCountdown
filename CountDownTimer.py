@@ -1,5 +1,6 @@
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
+import arrow
 
 # GUI:
 app = QApplication([])
@@ -15,7 +16,18 @@ window.show()
 
 
 def display_new_messages():
-    text_area.append('test')
+    d1 = arrow.get('2012-06-05 16:20:03', 'YYYY-MM-DD HH:mm:ss')
+    d2 = arrow.get(1504384602)
+    text_area.append('d1: '+str(d1))
+    text_area.append('d2: ' + str(d2))
+
+    now = arrow.now()
+    end = arrow.get('2019-01-31 16:20:03', 'YYYY-MM-DD HH:mm:ss')
+    calc = now - end
+    # calcned = calc.shift(cal)
+    # d3 = now.shift(days=+15).humanize()
+    # text_area.append('d3: ' + str(d3))
+    text_area.append(str(calc))
 
 
 # Signals:
