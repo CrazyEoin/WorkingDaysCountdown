@@ -1,12 +1,15 @@
 from PySide2.QtCore import *
 from PySide2.QtWidgets import *
 import arrow
+import workdays
 
 # GUI:
 app = QApplication([])
 text_area = QTextEdit()
 label = QLabel()
+label2 = QLabel()
 label.setText("Initial text")
+label2.setText("Initial text")
 
 # self.title = 'This is my title'
 # self.left = 400
@@ -17,6 +20,7 @@ label.setText("Initial text")
 layout = QVBoxLayout()
 layout.addWidget(text_area)
 layout.addWidget(label)
+layout.addWidget(label2)
 
 window = QWidget()
 window.setLayout(layout)
@@ -34,6 +38,8 @@ def display_new_messages():
     calc = now - end
     text_area.append(str(calc))
     label.setText(str(calc))
+
+    label2.setText(str(workdays.networkdays(now, end)))
 
 
 # def countDownDispaly():
