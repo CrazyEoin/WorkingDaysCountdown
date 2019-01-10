@@ -32,13 +32,13 @@ def display_new_messages():
     now = arrow.now()
     end = arrow.get('2019-01-31 00:00:00', 'YYYY-MM-DD HH:mm:ss')
     calc = now - end
-    label.setText("Exact time left including weekends" + str(calc))
+    label.setText("Exact time left including weekends: " + str(calc))
 
     # TODO: add a description label
-    label2.setText("Total working days left" + str(workdays.networkdays(now, end)))
+    label2.setText("Total working days left: " + str(workdays.networkdays(now, end)))
 
     totalHrsLeft = workdays.networkdays(now, end) * 7.5
-    label3.setText("Total working Hrs left" + str(totalHrsLeft))
+    label3.setText("Total working Hrs left: " + str(totalHrsLeft))
 
 
 # def countDownDispaly():

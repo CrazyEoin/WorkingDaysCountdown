@@ -1,0 +1,10 @@
+https://build-system.fman.io/python-qt-tutorial
+http://zetcode.com/python/arrow/
+https://pysimplegui.readthedocs.io/
+https://treyhunner.com/
+https://pabloariasal.github.io/2018/11/25/python-descriptors/
+https://github.com/CrazyEoin/WorkingDaysCountdown
+https://www.pyimagesearch.com/
+https://www.reddit.com/r/learnpython/comments/a6f1pn/any_good_guide_for_a_intermediate_python_user/
+https://pipenv.readthedocs.io/en/latest/
+https://rootnroll.com/d/pipenv/
