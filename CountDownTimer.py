@@ -23,6 +23,7 @@ layout.addWidget(label2)
 layout.addWidget(label3)
 
 window = QWidget()
+window.setWindowTitle("Count Down App")
 window.setLayout(layout)
 window.show()
 
