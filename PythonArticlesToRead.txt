@@ -8,3 +8,20 @@ https://www.pyimagesearch.com/
 https://www.reddit.com/r/learnpython/comments/a6f1pn/any_good_guide_for_a_intermediate_python_user/
 https://pipenv.readthedocs.io/en/latest/
 https://rootnroll.com/d/pipenv/
+
+https://www.reddit.com/r/learnpython/comments/9ykkcq/i_know_python_now_how_do_i_structure_it/
+Directory structure example: (. is your root directory)
+
+./.venv -- your virtual environment
+./projname/ -- source code for your project. It's important that this be a level up. Note: Many recommend using ./src/projname.
+This is important when you have a lot of related projects.
+./projname/__init__.py -- any config needed goes here. (ok I googled the underscores gawd)
+./projname/projectfile1.py
+./projname/projectfile2.py
+./projname/db/database.db -- example of where I might put a database.
+./projname/static/images/icon.jpg -- static content, for instance your images on a webpage
+./test -- Most testing frameworks will use the /test directory by default.
+./jankystuff
+(if you have another app that interfaces with your app, say something to quickly rebuild your database from a csv, it's good to just hide it off to the side. You can exclude a directory from version control (github) so it's nice to have your random programmer jank in the a jankfolder.)
+
+With the above and SOLID design: Organize your files so that when you import x, x is in the same directory or a parent directory. Do not jump sideways. For example, in /projname/a/a.py don't import from /projname/b/b.py. That means you're making too many folders.
