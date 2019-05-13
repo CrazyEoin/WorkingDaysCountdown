@@ -14,10 +14,12 @@ while LineLoopNumber < LineLoopMax:
     os.system("cls")
     CharacterLoopNumber = 0
     while CharacterLoopNumber < LoopMax:
-        # print("Loop Number:", CharacterLoopNumber)
+
         # for char in ListOfChar:
         print(ListOfChar)
-        if ((ListOfChar[CharacterLoopNumber+1]) & (CharacterLoopNumber < (LoopMax-1))) == 'X':
-            ListOfChar[CharacterLoopNumber] = 'X'
+        if CharacterLoopNumber < (LoopMax-1):
+            if (ListOfChar[CharacterLoopNumber+1])  == 'X':
+                ListOfChar[CharacterLoopNumber] = 'X'
         CharacterLoopNumber += 1
+    print("Loop Number:", CharacterLoopNumber)
 
